@@ -29,4 +29,19 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
         }, 1000) */
   }
 
+  public decrease()
+{
+    this.myImageWidth -=10;
+}
+
+public increase()
+{
+    this.myImageWidth +=10
+}
+
+public defaultSize()
+{
+    this.myImageWidth =200;
+}
+
 }
