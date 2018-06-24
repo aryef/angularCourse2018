@@ -3,7 +3,7 @@
     <p class="haiim">Only now, on {{myCurrentDate | date:'MMMM yyyy'}}  my great fiood with great {{myDiscount}}% discount</p> 
    
     </app-headline>
-<img [width]="myImageWidth" src="/assets/images/main.png">
+<img #homeImage [width]="myImageWidth" src="/assets/images/main.png">
 
 <div>
 
@@ -13,4 +13,10 @@
 
     <br>
     <input type=range min="100" max="500" step="10"  [(ngModel)] ="myImageWidth">
+
+    <span>
+       <p>
+            Image width: {{homeImage.width}}
+       </p> 
+    </span>
 </div>
