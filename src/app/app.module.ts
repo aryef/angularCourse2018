@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { HeadlineComponent } from './headline/headline.component';
-
+import{FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ import { HeadlineComponent } from './headline/headline.component';
     HeadlineComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
