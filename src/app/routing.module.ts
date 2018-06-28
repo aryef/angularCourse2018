@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
+import { Page404Component } from './page404/page404.component';
 
 const routes:Routes=[
 
 {path:"home", component:MainComponent},
 {path:"about", component:AboutComponent},
-{path:"", redirectTo:"\home",pathMatch:"full"}   //default route
-
+{path:"", redirectTo:"\home",pathMatch:"full"} ,  //default route
+{path: '**', component: Page404Component}
 ];
 
 @NgModule({

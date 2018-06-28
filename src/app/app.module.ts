@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component'
 import { RoutingModule } from './routing.module';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { Page404Component } from './page404/page404.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { MenuComponent } from './menu/menu.component';
     MainComponent,
     HeadlineComponent,
     AboutComponent,
-    MenuComponent
+    MenuComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
