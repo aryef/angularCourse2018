@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { Page404Component } from './page404/page404.component';
 import { ThumbnailComponent } from './thumbnail/thumbnail.component';
 import { TopProductsComponent } from './top-products/top-products.component';
+import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { TopProductsComponent } from './top-products/top-products.component';
     MenuComponent,
     Page404Component,
     ThumbnailComponent,
-    TopProductsComponent
+    TopProductsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
