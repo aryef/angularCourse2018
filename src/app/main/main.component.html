@@ -26,5 +26,16 @@
     <p ngClass="greenish">Apples</p>
     <p [ngClass]="bananaStyling">Bananas</p>
     <p [ngStyle]="peachStyling">Toys</p>
+    <p *ngIf="isWinter; else summer" [ngClass]="bananaStyling">Oranges</p>
+    <ng-template #summer>
+        <p>watermellon</p>
+    </ng-template>
+
+    <p [ngSwitch]="grapesColor"> 
+        <span *ngSwitchCase="'green'"> Green Grapes </span>
+        <span *ngSwitchCase="'black'"> Black Grapes </span>
+        <span *ngSwitchCase="'red'"> Red Grapes </span>
+        <span *ngSwitchDefault> All Grapes </span>
+    </p>
 
 </div>

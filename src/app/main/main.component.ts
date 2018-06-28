@@ -12,6 +12,8 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
     public myImageWidth:number = 200;
     public bananaStyling;
     public peachStyling;
+    public isWinter:boolean;
+    public grapesColor:string;
 
     public ngOnDestroy(): void {
         throw new Error("Method not implemented.");
@@ -29,6 +31,10 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
       this.bananaStyling = {"yellowish":true,"boldish":true  }
       //this gets specific properties - [ngStyle] used in html
       this.peachStyling={"color":"orange", "text-decoration":"underline", "font-weight":"bold", "font-size":"30px"};
+
+      this.isWinter = this.myCurrentDate.getMonth()<3|| this.myCurrentDate.getMonth()>9;
+        this.grapesColor= "red";
+
 
       /* setInterval(()=>{
           this.myImageWidth +=10;
