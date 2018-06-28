@@ -3,5 +3,7 @@ div{
     height: 200px;
     margin: 3px;
     padding: 3px;
-    border:1px solid black
+    border:1px solid black;
+    display: inline-block
 }
+

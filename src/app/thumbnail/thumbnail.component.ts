@@ -10,7 +10,7 @@ export class ThumbnailComponent implements OnInit {
     @Input()
     public source:string;
 
-    @Input()
+    @Input("picWidth")   //can cnange name of binding if needed
     public picWidth:number;
     @Input()
     public picHeight:number;
