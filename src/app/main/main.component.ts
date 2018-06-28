@@ -1,4 +1,5 @@
 import { Component, OnInit, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main',
@@ -24,9 +25,13 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
         throw new Error("Method not implemented.");
     }
   
-    constructor() { }
+    public constructor(private title:Title) { }
 
   public ngOnInit() {
+
+
+    this.title.setTitle("my Arye North Harta");
+    
       this.myDiscount=12;
       this.myCurrentDate = (new Date());
       // it gets css classes as input; [ngClass] --- used in html
