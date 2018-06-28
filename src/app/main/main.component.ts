@@ -15,6 +15,7 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
     public redStyling;
     public isWinter:boolean;
     public grapesColor:string;
+    public vegetables:string[];
 
     public ngOnDestroy(): void {
         throw new Error("Method not implemented.");
@@ -36,7 +37,7 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
 
       this.isWinter = this.myCurrentDate.getMonth()<3|| this.myCurrentDate.getMonth()>9;
         this.grapesColor= "red";
-
+    this.vegetables=["coco", "moco", "toco"]
 
       /* setInterval(()=>{
           this.myImageWidth +=10;
