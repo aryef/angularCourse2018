@@ -8,6 +8,8 @@ import { MainComponent } from './main/main.component';
 import { HeadlineComponent } from './headline/headline.component';
 import{FormsModule} from '@angular/forms';
 import { AboutComponent } from './about/about.component'
+import { RoutingModule } from './routing.module';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { AboutComponent } from './about/about.component'
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RoutingModule,  //importing our routing module
+    RouterModule //infra needed for routing
   ],
   providers: [],
   bootstrap: [AppComponent]
