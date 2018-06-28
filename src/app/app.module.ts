@@ -10,6 +10,7 @@ import{FormsModule} from '@angular/forms';
 import { AboutComponent } from './about/about.component'
 import { RoutingModule } from './routing.module';
 import { RouterModule } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     MainComponent,
     HeadlineComponent,
-    AboutComponent
+    AboutComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

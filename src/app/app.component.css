@@ -22,3 +22,10 @@ footer {
     width: 100%;
     border-top: 2px solid black;
 }
+
+nav:{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+   font-size: larger
+}

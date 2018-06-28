@@ -27,8 +27,34 @@ ng new newProjectName
 ng serve -o
 
 
-ng g c newComponentName
+ng g c newComponentName --spec false
 
 ng g newModuleName routing --spec false --flat
 
 ng g m routing --spec false --flat
+
+{{}} - interpolation
+[]  - binding from variable to UI
+()  - binding from UI to variable /function/ script
+
+event binding (click) ...
+
+[()]  - two way binding
+[ngClass] - binding to css ngClass
+[ngStyle]  - binding  to custom ngStyle
+*ngIf -- Structural 
+
+
+Directives - use pipe
+    <p class="haiim">Only now, on {{myCurrentDate | date:'MMMM yyyy'}}  my great fiood with great {{myDiscount}}% discount</p> 
+
+implement intrefaces
+Dependency Injection (DI) - using constructors
+
+service - inject service using DI to constructors
+
+route 
+
+// add component to a specific module
+ng g c menu spec-- false  --module app.module
+
