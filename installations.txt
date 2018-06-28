@@ -1,0 +1,32 @@
+node.js 8.5.3
+npm install -g @angular/cli
+.../users/arye/appdata/roaming/npm/node_modules
+ENVIRONMENT == PATH to ng.bat
+visual studo code
+
+user settings:
+
+{
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "workbench.statusBar.visible": false,
+    "explorer.openEditors.visible": 0,
+    "editor.detectIndentation": false,
+    "editor.lineNumbers": "on",
+    "window.zoomLevel": 0,
+    "editor.fontSize": 18,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "git.ignoreLegacyWarning": true
+}
+
+ng new newProjectName
+
+ng serve -o
+
+ng g c newModuleName
+
+
+ng 
