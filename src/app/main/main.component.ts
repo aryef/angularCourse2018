@@ -6,7 +6,7 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit, OnChanges, OnDestroy {
+export class MainComponent implements OnInit, OnChanges {
 
     public myDiscount: number
     public myCurrentDate:Date
@@ -18,11 +18,9 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
     public grapesColor:string;
     public vegetables:string[];
 
-    public ngOnDestroy(): void {
-        throw new Error("Method not implemented.");
-    }
+   
     ngOnChanges(changes: SimpleChanges): void {
-        throw new Error("Method not implemented.");
+       //
     }
   
     public constructor(private title:Title) { }
