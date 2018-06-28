@@ -58,3 +58,9 @@ route
 // add component to a specific module
 ng g c menu spec-- false  --module app.module
 
+@  - annotation
+
+class property that enables set a valuer to propert
+@Input()
+
+
