@@ -11,6 +11,7 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
     public myCurrentDate:Date
     public myImageWidth:number = 200;
     public bananaStyling;
+    public peachStyling;
 
     public ngOnDestroy(): void {
         throw new Error("Method not implemented.");
@@ -24,7 +25,10 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
   public ngOnInit() {
       this.myDiscount=12;
       this.myCurrentDate = (new Date());
+      // it gets css classes as input; [ngClass] --- used in html
       this.bananaStyling = {"yellowish":true,"boldish":true  }
+      //this gets specific properties - [ngStyle] used in html
+      this.peachStyling={"color":"orange", "text-decoration":"underline", "font-weight":"bold", "font-size":"30px"};
 
       /* setInterval(()=>{
           this.myImageWidth +=10;
