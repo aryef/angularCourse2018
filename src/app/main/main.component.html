@@ -39,6 +39,6 @@
     </p>
 
     <h3>Vegetables:</h3>
-    <p *ngFor="let v of vegetables">{{v}}</p>
+    <p *ngFor="let v of vegetables; let i=index">{{i+1}} - {{v}}</p>
 
 </div>
