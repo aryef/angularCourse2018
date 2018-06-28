@@ -34,7 +34,7 @@
     <p [ngSwitch]="grapesColor"> 
         <span *ngSwitchCase="'green'"> Green Grapes </span>
         <span *ngSwitchCase="'black'"> Black Grapes </span>
-        <span *ngSwitchCase="'red'"> Red Grapes </span>
+        <span *ngSwitchCase="'red'" [ngClass]="redStyling"> Red Grapes </span>
         <span *ngSwitchDefault> All Grapes </span>
     </p>
 

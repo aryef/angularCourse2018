@@ -12,6 +12,7 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
     public myImageWidth:number = 200;
     public bananaStyling;
     public peachStyling;
+    public redStyling;
     public isWinter:boolean;
     public grapesColor:string;
 
@@ -29,6 +30,7 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
       this.myCurrentDate = (new Date());
       // it gets css classes as input; [ngClass] --- used in html
       this.bananaStyling = {"yellowish":true,"boldish":true  }
+      this.redStyling={"reddish":true,"boldish":true  }
       //this gets specific properties - [ngStyle] used in html
       this.peachStyling={"color":"orange", "text-decoration":"underline", "font-weight":"bold", "font-size":"30px"};
 
