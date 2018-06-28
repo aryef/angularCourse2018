@@ -10,6 +10,7 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
     public myDiscount: number
     public myCurrentDate:Date
     public myImageWidth:number = 200;
+    public bananaStyling;
 
     public ngOnDestroy(): void {
         throw new Error("Method not implemented.");
@@ -23,6 +24,7 @@ export class MainComponent implements OnInit, OnChanges, OnDestroy {
   public ngOnInit() {
       this.myDiscount=12;
       this.myCurrentDate = (new Date());
+      this.bananaStyling = {"yellowish":true,"boldish":true  }
 
       /* setInterval(()=>{
           this.myImageWidth +=10;

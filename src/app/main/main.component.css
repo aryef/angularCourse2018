@@ -1,4 +1,4 @@
-div{
+div:first-of-type{
     position: absolute;
     right: 20px;
     top: 120px;
@@ -6,3 +6,15 @@ div{
     padding: 10px;
 
 }
+div:last-of-type{
+    position: absolute;
+    left: 20px;
+    top: 120px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.greenish{color:green}
+
+.yellowish{color:blueviolet}
+
+.boldish{font-size: 40px; font-weight: bold}
