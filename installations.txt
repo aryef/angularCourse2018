@@ -63,4 +63,8 @@ ng g c menu spec-- false  --module app.module
 class property that enables set a valuer to propert
 @Input()
 
+ng g s services/products --spec false
+
+
+
 

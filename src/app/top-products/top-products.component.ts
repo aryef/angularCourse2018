@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-top-products',
@@ -9,14 +10,11 @@ import { Product } from '../models/product';
 export class TopProductsComponent implements OnInit {
 
     public products:Product[];
-  constructor() { }
+  constructor( private productsService: ProductsService) { }
 
-  ngOnInit() {
+   ngOnInit() {
 
-    this.products=[];
-    this.products.push(new Product(1, "Apple", 3.5,100));
-    this.products.push(new Product(2, "Banana", 2.5,200));
-    this.products.push(new Product(3, "Peach", 4.5,300));
+    this.products=this.productsService.getTopProducts()
 
   }
 
