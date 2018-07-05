@@ -5,15 +5,17 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { Page404Component } from './page404/page404.component';
 import { TopProductsComponent } from './top-products/top-products.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 const routes:Routes=[
 
 {path:"home", component:MainComponent},
 {path:"about", component:AboutComponent},
 {path:"top-products", component:TopProductsComponent},
+{path:"product-list", component:ProductListComponent},
 {path:"", redirectTo:"\home",pathMatch:"full"} ,  //default route
+{path: '**', component: Page404Component},
 
-{path: '**', component: Page404Component}
 ];
 
 @NgModule({
