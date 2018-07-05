@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { Page404Component } from './page404/page404.component';
 import { TopProductsComponent } from './top-products/top-products.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes:Routes=[
 
@@ -13,6 +14,7 @@ const routes:Routes=[
 {path:"about", component:AboutComponent},
 {path:"top-products", component:TopProductsComponent},
 {path:"product-list", component:ProductListComponent},
+{path:"one-product/:id", component:ProductDetailComponent},
 {path:"", redirectTo:"\home",pathMatch:"full"} ,  //default route
 {path: '**', component: Page404Component},
 

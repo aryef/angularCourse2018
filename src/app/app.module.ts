@@ -17,6 +17,7 @@ import { TopProductsComponent } from './top-products/top-products.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     ThumbnailComponent,
     TopProductsComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
