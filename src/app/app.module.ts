@@ -15,6 +15,8 @@ import { Page404Component } from './page404/page404.component';
 import { ThumbnailComponent } from './thumbnail/thumbnail.component';
 import { TopProductsComponent } from './top-products/top-products.component';
 import { ProductComponent } from './product/product.component';
+import { HttpClientModule } from "@angular/common/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { ProductComponent } from './product/product.component';
     BrowserModule,
     FormsModule,
     RoutingModule,  //importing our routing module
-    RouterModule //infra needed for routing
+    RouterModule ,//infra needed for routing
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
