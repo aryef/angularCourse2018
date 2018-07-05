@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Product } from '../models/product';
 import { ProductsService } from '../services/products.service';
 import { Subscription } from 'rxjs';
@@ -8,9 +8,12 @@ import { Subscription } from 'rxjs';
   templateUrl: './top-products.component.html',
   styleUrls: ['./top-products.component.css']
 })
-export class TopProductsComponent implements OnInit {
+export class TopProductsComponent implements OnInit , OnDestroy{
+    ngOnDestroy(): void {
+        this.subscription.unsubscribe();
+    }
 
-    public products:Product[] = new Array<Product>();
+    public products:Product[] = [];
 
     private subscription:Subscription;
 
