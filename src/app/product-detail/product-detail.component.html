@@ -1,9 +1,13 @@
 <div *ngIf="product">
-        <p>
-                <tr> Product: {{product.name}}</tr>
-                <tr> Stock: {{product.stock}}</tr>
-                <tr><app-thumbnail source="/assets/images/products/{{product.id}}.jpg" picWidth="50" picHeight="50"></app-thumbnail></tr>
+        <table>
+            <tr> 
+                    <th> Product: {{product.name}}</th>
+                    <th> Stock: {{product.stock}}</th>
+                    <th><app-thumbnail source="/assets/images/products/{{product.id}}.jpg" picWidth="50" picHeight="50"></app-thumbnail></th>
+    
 
-               </p>
+            </tr>
+               
+        </table>
 </div>
 
