@@ -1,17 +1,19 @@
-<app-headline> Contact Us!</app-headline>
+<app-headline>     
+<p class="haiim">Contact Us</p>    
+</app-headline>
 
-<form>
+<form (ngSubmit)="send()">
 <div>
-    <input type="text" placeholder="First Name">
+    <input name="firstName" [(ngModel)]="contactUs.firstName" type="text" placeholder="First Name">
 </div>
 <div>
-        <input type="text" placeholder="Last Name">
+        <input name="lastName" [(ngModel)]="contactUs.lastName"  type="text" placeholder="Last Name">
 </div>
 <div>
-        <input type="email" placeholder="Email">
+        <input name="email" [(ngModel)]="contactUs.email"  type="email" placeholder="Email">
 </div>
 <div>
-        <textarea placeholder="Message"></textarea>
+        <textarea name="message" [(ngModel)]="contactUs.message"  placeholder="Message"></textarea>
 </div>
 <button>Send</button>
 </form>

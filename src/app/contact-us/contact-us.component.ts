@@ -10,5 +10,8 @@ export class ContactUsComponent  {
 public contactUs: ContactUs = new ContactUs();
 
  
+public send ():void{
+    alert(this.contactUs);
 
+}
 }
