@@ -18,7 +18,7 @@ export class ColoredDirective implements OnInit{
         {
             this.color=this.getRandomColor()
         }
-        
+
     this.elementRef.nativeElement.style.color = this.color;
  }
 
@@ -28,7 +28,8 @@ export class ColoredDirective implements OnInit{
     let green=Math.floor(256*Math.random());
     let blue=Math.floor(256*Math.random());
 
-    let color ="rgb("+red+ "," +green+","+ blue+ ")"
+    //let color ="rgb("+red+ "," +green+","+ blue+ ")"
+    let color =`rgb(${red},${green},${blue})`;
     return color;
  }
 
