@@ -21,7 +21,7 @@ export class ThumbnailComponent implements OnInit {
     @Output()
     public enter: EventEmitter<string> = new EventEmitter<string>();
 
-    @Output()
+    @Output("exit")
     public leave: EventEmitter<string> = new EventEmitter<string>();
     
   constructor() { }
