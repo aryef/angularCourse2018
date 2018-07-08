@@ -6,13 +6,27 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ZeroToSymbolPipe implements PipeTransform {
 
   transform(value: number, args?: any): any {
-    if(value===0)
-    {
-        return "---"
-    }
-    else{
-        return value;
-    }
+      if(args!= undefined)
+      {
+        if(value===0)
+        {
+            return args;
+        } 
+        else{
+            return value;
+        }
+      }
+      else
+      {
+        if(value===0)
+        {
+            return "---";
+        } 
+        else{
+            return value;
+        }
+      }
+    
     return null;
   }
 
