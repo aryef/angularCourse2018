@@ -11,7 +11,9 @@
         <input name="lastName" [(ngModel)]="contactUs.lastName"  type="text" placeholder="Last Name">
 </div>
 <div>
-        <input name="email" [(ngModel)]="contactUs.email"  type="email" placeholder="Email">
+        <input #email="ngModel" required email name="email" [(ngModel)]="contactUs.email"  type="email" placeholder="Email">
+        <span *ngIf="email.errors?.required" [hidden]="email.pristine || email.valid">Missing email name</span>
+        <span *ngIf="email.errors?.email" [hidden]="email.pristine || email.valid">email is not valid</span>
 </div>
 <div>
         <textarea name="message" [(ngModel)]="contactUs.message"  placeholder="Message"></textarea>
