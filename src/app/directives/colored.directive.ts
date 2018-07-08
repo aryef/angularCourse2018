@@ -13,7 +13,23 @@ export class ColoredDirective implements OnInit{
     constructor(private elementRef: ElementRef) { }
 
     ngOnInit(): void {
+
+        if(!this.color)
+        {
+            this.color=this.getRandomColor()
+        }
+        
     this.elementRef.nativeElement.style.color = this.color;
+ }
+
+ private getRandomColor():string{
+
+    let red=Math.floor(256*Math.random());
+    let green=Math.floor(256*Math.random());
+    let blue=Math.floor(256*Math.random());
+
+    let color ="rgb("+red+ "," +green+","+ blue+ ")"
+    return color;
  }
 
 }
