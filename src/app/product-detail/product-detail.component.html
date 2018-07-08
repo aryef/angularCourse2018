@@ -1,4 +1,7 @@
-<p>
- <tr> Product: {{product.name}}</tr>
- <tr> Stock: {{product.stock}}</tr>
-</p>
+<div *ngIf="product">
+        <p>
+                <tr> Product: {{product.name}}</tr>
+                <tr> Stock: {{product.stock}}</tr>
+               </p>
+</div>
+

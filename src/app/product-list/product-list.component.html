@@ -1,4 +1,5 @@
-<table>
+<div *ngIf="products">
+   <table>
 
     <tr>
         <th> Name</th>
@@ -16,5 +17,7 @@
             <app-thumbnail source="/assets/images/products/{{p.id}}.jpg" picWidth="50" picHeight="50"></app-thumbnail>
         </td>
     </tr>
-</table>
+</table> 
+</div>
+
 
