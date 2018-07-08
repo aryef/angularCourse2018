@@ -5,6 +5,7 @@
         <th>Price</th>
         <th>Stock</th>
         <th>Picture</th>
+        <th>Like</th>
     </tr>
    
     <tr *ngFor="let p of products">
@@ -19,6 +20,9 @@
             (enter)="preview.src=$event"
             (exit)="preview.src=''">
         </app-thumbnail>
+        </td>
+        <td>
+            <app-like></app-like>
         </td>
     </tr>
 </table> 

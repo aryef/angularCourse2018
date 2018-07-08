@@ -7,6 +7,7 @@ import { Subject } from 'rxjs';
 export class LikeService {
 
     private likesreporterSubject: Subject<number> = new Subject<number>();
+    
   constructor() { }
 
 
