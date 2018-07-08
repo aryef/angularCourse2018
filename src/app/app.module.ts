@@ -22,6 +22,7 @@ import { LikeComponent } from './like/like.component';
 import { ZeroToSymbolPipe } from './pipes/zero-to-symbol.pipe';
 import { ColoredDirective } from './directives/colored.directive';
 import { SeasonDirective } from './directives/season.directive';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SeasonDirective } from './directives/season.directive';
     LikeComponent,
     ZeroToSymbolPipe,
     ColoredDirective,
-    SeasonDirective
+    SeasonDirective,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
