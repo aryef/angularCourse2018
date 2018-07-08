@@ -1,6 +1,5 @@
-<div *ngIf="products">
    <table>
-
+  
     <tr>
         <th> Name</th>
         <th>Price</th>
@@ -14,10 +13,18 @@
         <td>{{p.price}}</td>
         <td>{{p.stock}}</td>
         <td>
-            <app-thumbnail source="/assets/images/products/{{p.id}}.jpg" picWidth="50" picHeight="50"></app-thumbnail>
+            <app-thumbnail source="/assets/images/products/{{p.id}}.jpg" 
+            picWidth="50" 
+            picHeight="50"
+            (enter)="preview.src=$event"
+            (leave)="preview.src">
+        </app-thumbnail>
         </td>
     </tr>
 </table> 
-</div>
+
+<img #preview>
+
+
 
 
