@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, OnInit } from '@angular/core';
+import { Directive, Input, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appColored]' //the [] means that it is the directive usage
@@ -10,7 +10,7 @@ export class ColoredDirective implements OnInit{
     public color: string;
 
     //angula service which referemces host element
-    constructor(private elementRef: ElementRef) { }
+    constructor(private elementRef: ElementRef, private renderer2: Renderer2) { }
 
     ngOnInit(): void {
 
@@ -19,7 +19,9 @@ export class ColoredDirective implements OnInit{
             this.color=this.getRandomColor()
         }
 
-    this.elementRef.nativeElement.style.color = this.color;
+    //this.elementRef.nativeElement.style.color = this.color;
+    this.renderer2.setStyle(this.elementRef.nativeElement, "color", this.color);
+    
  }
 
  private getRandomColor():string{
