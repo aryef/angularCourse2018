@@ -12,10 +12,10 @@
 
         <td><a routerLink="/one-product/{{p.id}}">{{p.name}}</a></td>
         <td>{{p.price |  currency:'ILS':'symbol'}}</td>
-        <td>{{p.stock | zeroToSymbol}}</td>
+        <td>{{p.stock | zeroToSymbol:'yyy'}}</td>
         <td>
             <app-thumbnail source="/assets/images/products/{{p.id}}.jpg" 
-            picWidth="50" 
+            picWidth="45" 
             picHeight="50"
             (enter)="preview.src=$event"
             (exit)="preview.src=''">
