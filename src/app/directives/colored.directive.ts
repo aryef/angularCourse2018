@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Directive, Input, ElementRef, OnInit, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appColored]' //the [] means that it is the directive usage
@@ -21,7 +21,20 @@ export class ColoredDirective implements OnInit{
 
     //this.elementRef.nativeElement.style.color = this.color;
     this.renderer2.setStyle(this.elementRef.nativeElement, "color", this.color);
-    
+
+ }
+
+ @HostListener("mouseenter")
+ public onMouseEnter()
+ {
+     this.renderer2.setStyle(this.elementRef.nativeElement, "color", "yellow");
+
+ }
+ 
+ @HostListener("mouseleave")
+ public onMouseLeave()
+ {
+    this.renderer2.setStyle(this.elementRef.nativeElement, "color",this.color);
  }
 
  private getRandomColor():string{
