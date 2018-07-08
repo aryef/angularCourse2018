@@ -2,9 +2,10 @@
 <p class="haiim">Contact Us</p>    
 </app-headline>
 
-<form (ngSubmit)="send()">
+<form #contactUsForm="ngForm" (ngSubmit)="send()">
 <div>
-    <input name="firstName" [(ngModel)]="contactUs.firstName" type="text" placeholder="First Name">
+    <input #firstName="ngModel" required name="firstName" [(ngModel)]="contactUs.firstName" type="text" placeholder="First Name">
+    <span [hidden]="firstName.pristine || firstName.valid">Missing First name</span>
 </div>
 <div>
         <input name="lastName" [(ngModel)]="contactUs.lastName"  type="text" placeholder="Last Name">
@@ -15,5 +16,5 @@
 <div>
         <textarea name="message" [(ngModel)]="contactUs.message"  placeholder="Message"></textarea>
 </div>
-<button>Send</button>
+<button [disabled]="contactUsForm.form.invalid">Send</button>
 </form>

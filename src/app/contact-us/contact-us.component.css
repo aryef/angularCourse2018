@@ -3,3 +3,11 @@ input, textarea, button{
     font-size: x-large;
     margin: 10px;
 }
+
+
+span{
+    margin: 10px;
+    text-align: left;
+    color: red;
+    position: absolute;
+}
