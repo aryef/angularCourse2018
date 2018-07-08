@@ -16,7 +16,10 @@
         <span *ngIf="email.errors?.email" [hidden]="email.pristine || email.valid">email is not valid</span>
 </div>
 <div>
-        <textarea required minlength="10" name="message" [(ngModel)]="contactUs.message"  placeholder="Message"></textarea>
+        <textarea #message= "ngModel" required minlength="10" name="message" [(ngModel)]="contactUs.message"  placeholder="Message"></textarea>
+        <span *ngIf="message.errors?.required" [hidden]="email.pristine || email.valid">Missing email name</span>
+        <span *ngIf="message.errors?.email" [hidden]="email.pristine || email.valid">email is not valid</span>
+
 </div>
 <button [disabled]="contactUsForm.form.invalid">Send</button>
 </form>

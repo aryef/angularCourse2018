@@ -11,3 +11,7 @@ span{
     color: red;
     position: absolute;
 }
+.ng-dirty.ng-invalid:not(form)
+{
+    background-color: pink;
+}
