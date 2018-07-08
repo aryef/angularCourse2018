@@ -8,10 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-    ngOnDestroy(): void {
-        
-      this.subscription.unsubscribe();
-    }
+   
 
     public likes: number=0;
   constructor(private likeService:LikeService) { }
@@ -30,6 +27,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
           }
       });
+  }
+
+  ngOnDestroy(): void {
+        
+    this.subscription.unsubscribe();
   }
 
 }
