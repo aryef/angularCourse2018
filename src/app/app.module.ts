@@ -20,6 +20,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LikeComponent } from './like/like.component';
 import { ZeroToSymbolPipe } from './pipes/zero-to-symbol.pipe';
+import { ColoredDirective } from './directives/colored.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ZeroToSymbolPipe } from './pipes/zero-to-symbol.pipe';
     ProductListComponent,
     ProductDetailComponent,
     LikeComponent,
-    ZeroToSymbolPipe
+    ZeroToSymbolPipe,
+    ColoredDirective
   ],
   imports: [
     BrowserModule,
