@@ -1,9 +1,6 @@
 <h1>Northwind</h1>
 <h5 *ngIf="likes">
-    <a *ngIf="likes===1">
-            You like {{likes}} product
-    </a>
-    <a *ngIf="likes >= 2">
-            You like {{likes}} products
-    </a>
+   
+            You like {{likes}} product <a *ngIf="likes > 1">s</a>
+   
 </h5>
