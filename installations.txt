@@ -65,6 +65,8 @@ class property that enables set a valuer to propert
 
 ng g s services/products --spec false
 
+ng g p pipes/zeroToSymbol --spec false --skip-import
+
 
 
 

@@ -19,6 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LikeComponent } from './like/like.component';
+import { ZeroToSymbolPipe } from './pipes/zero-to-symbol.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LikeComponent } from './like/like.component';
     ProductComponent,
     ProductListComponent,
     ProductDetailComponent,
-    LikeComponent
+    LikeComponent,
+    ZeroToSymbolPipe
   ],
   imports: [
     BrowserModule,
