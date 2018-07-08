@@ -1,8 +1,10 @@
 
 <app-headline>
     <p class="haiim">Only now, on {{myCurrentDate | date:'MMMM yyyy'}}  my great fiood with great {{myDiscount}}% discount</p> 
-   
+  
     </app-headline>
+    <p *appSeason="'summer'">And only now on summer - delicious ice creams</p>
+
 <img #homeImage [width]="myImageWidth" src="/assets/images/main.png">
 
 <div>

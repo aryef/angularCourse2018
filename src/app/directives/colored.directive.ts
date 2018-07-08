@@ -6,7 +6,7 @@ import { Directive, Input, ElementRef, OnInit, Renderer2, HostListener } from '@
 export class ColoredDirective implements OnInit{
    
 
-    @Input()
+    @Input("appColored")  //usage <h1 appColored>Northwind</h1>  or <h1 appColored="red">Northwind</h1>
     public color: string;
 
     //angula service which referemces host element

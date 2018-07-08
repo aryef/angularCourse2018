@@ -21,6 +21,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { LikeComponent } from './like/like.component';
 import { ZeroToSymbolPipe } from './pipes/zero-to-symbol.pipe';
 import { ColoredDirective } from './directives/colored.directive';
+import { SeasonDirective } from './directives/season.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ColoredDirective } from './directives/colored.directive';
     ProductDetailComponent,
     LikeComponent,
     ZeroToSymbolPipe,
-    ColoredDirective
+    ColoredDirective,
+    SeasonDirective
   ],
   imports: [
     BrowserModule,
