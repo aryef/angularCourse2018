@@ -65,7 +65,6 @@ import {reducer} from './redux/reducer';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
-    NgRedux,
     NgReduxModule
   ],
   providers: [],

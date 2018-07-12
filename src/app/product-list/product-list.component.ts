@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../models/product';
 import { LikeService } from '../services/like.service';
+import { NgRedux } from 'ng2-redux';
+import { AppState } from '../redux/app.state';
 
 @Component({
   selector: 'app-product-list',
@@ -11,12 +13,28 @@ import { LikeService } from '../services/like.service';
 export class ProductListComponent implements OnInit, OnDestroy {
    
 
-  constructor(private productsService: ProductsService, private likesService:LikeService) { }
+  constructor(private productsService: ProductsService, private likesService:LikeService, private ngRedux:NgRedux<AppState>) { }
 
- private products:Product[];
+    private products:Product[];
+
   ngOnInit() {
 
-    this.productsService.getAllProducts().subscribe(products => this.products= products);
+    this.ngRedux.subscribe( () => {
+        this.products=this.ngRedux.getState().products;
+    });
+
+    //if there are pruducts in the store
+    if(this.ngRedux.getState().products)
+    {
+        this.products=this.ngRedux.getState().products;
+
+    }
+    //store is empty
+    else{
+
+        this.productsService.downloadAllProduct();
+    }
+    //this.productsService.getAllProducts().subscribe(products => this.products= products);
     
   }
 
