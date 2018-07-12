@@ -24,6 +24,8 @@ import { ColoredDirective } from './directives/colored.directive';
 import { SeasonDirective } from './directives/season.directive';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CapitalizedValidatorDirective } from './directives/capitalized-validator.directive';
+import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatInputModule, MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,11 @@ import { CapitalizedValidatorDirective } from './directives/capitalized-validato
     FormsModule,
     RoutingModule,  //importing our routing module
     RouterModule ,//infra needed for routing
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

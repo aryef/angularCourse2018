@@ -71,6 +71,9 @@ ng g p pipes/zeroToSymbol --spec false --skip-import
 ng g d directives/colored --spec false --module app.module
 
 
+npm install @angular/material @angular/cdk @angular/animations
+
+
 
 
 
