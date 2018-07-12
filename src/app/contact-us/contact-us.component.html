@@ -11,18 +11,26 @@
     <span *ngIf="firstName.errors?.notCapitalized"  [hidden]="firstName.pristine || firstName.valid">First name must start with Capitall letter</span>
 </div>
 <div>
-        <input name="lastName" [(ngModel)]="contactUs.lastName"  type="text" placeholder="Last Name">
+    <mat-form-field>
+        <input matInput name="lastName" [(ngModel)]="contactUs.lastName"  type="text" placeholder="Last Name">
+    </mat-form-field>
 </div>
 <div>
-        <input #email="ngModel" required email name="email" [(ngModel)]="contactUs.email"  type="email" placeholder="Email">
+    <mat-form-field>
+        <input matInput #email="ngModel" required email name="email" [(ngModel)]="contactUs.email"  type="email" placeholder="Email">
+    </mat-form-field>
         <span *ngIf="email.errors?.required" [hidden]="email.pristine || email.valid">Missing email name</span>
         <span *ngIf="email.errors?.email" [hidden]="email.pristine || email.valid">email is not valid</span>
 </div>
 <div>
-        <textarea #message= "ngModel" required minlength="10" name="message" [(ngModel)]="contactUs.message"  placeholder="Message"></textarea>
+    <mat-form-field>
+        <textarea matInput #message= "ngModel" required minlength="10" name="message" [(ngModel)]="contactUs.message"  placeholder="Message"></textarea>
+    </mat-form-field>
         <span *ngIf="message.errors?.required" [hidden]="email.pristine || email.valid">Missing email name</span>
         <span *ngIf="message.errors?.email" [hidden]="email.pristine || email.valid">email is not valid</span>
 
 </div>
-<button [disabled]="contactUsForm.form.invalid">Send</button>
+<button mat-button [disabled]="contactUsForm.form.invalid">Send</button>
+<br>
+<mat-checkbox> i agree ...</mat-checkbox>
 </form>
