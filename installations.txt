@@ -84,6 +84,19 @@ Redux
 
 npm install redux ng2-redux
 
+debugging:
+
+add chrome debugging extension
+https://marketplace.visualstudio.com/items?itemName=AdamAnand.adamstool
+
+add launch.json for config:  Debug --> add configuration
+
+use thsi for offline downloading
+https://vscode-offline.herokuapp.com/
+
+https://marketplace.visualstudio.com/items?itemName=AdamAnand.adamstool
+
+
 
 
 
