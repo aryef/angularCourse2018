@@ -3,8 +3,9 @@ import { IAction, ActionType } from "./actions";
 
 export function reducer(oldState: AppState, action: IAction)
 {
-    let newState: AppState = new AppState(oldState.products);
+    //let newState: AppState = new AppState(oldState.products);
 
+    let newState =  {...oldState};  //copy constructor
     switch(action.type)
     {
         case ActionType.AllProductsDownloaded:
