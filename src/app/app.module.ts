@@ -23,6 +23,7 @@ import { ZeroToSymbolPipe } from './pipes/zero-to-symbol.pipe';
 import { ColoredDirective } from './directives/colored.directive';
 import { SeasonDirective } from './directives/season.directive';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CapitalizedValidatorDirective } from './directives/capitalized-validator.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ZeroToSymbolPipe,
     ColoredDirective,
     SeasonDirective,
-    ContactUsComponent
+    ContactUsComponent,
+    CapitalizedValidatorDirective
   ],
   imports: [
     BrowserModule,
