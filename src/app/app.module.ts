@@ -26,6 +26,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CapitalizedValidatorDirective } from './directives/capitalized-validator.directive';
 import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule, MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {NgRedux, NgReduxModule} from 'ng2-redux';
+import {AppState} from './redux/app.state';
+
+import {reducer} from './redux/reducer';
+
+
 
 @NgModule({
   declarations: [
@@ -58,9 +64,17 @@ import {MatInputModule, MatButtonModule, MatCheckboxModule} from '@angular/mater
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    NgRedux,
+    NgReduxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+    public constructor (ngRedux:NgRedux<AppState>)
+    {
+        ngRedux.configureStore(reducer, new AppState());
+    }
+}

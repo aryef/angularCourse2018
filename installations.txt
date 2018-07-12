@@ -80,6 +80,10 @@ https://material.angular.io/components/categories
 
 https://material.io/
 
+Redux
+
+npm install redux ng2-redux
+
 
 
 
