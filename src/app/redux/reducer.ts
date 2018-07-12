@@ -10,7 +10,7 @@ export function reducer(oldState: AppState, action: IAction)
         case ActionType.AllProductsDownloaded:
             newState.products= action.payload;
             break;
-        case ActionType.AllProductsDownloaded:
+        case ActionType.OneProductAdded:
             // add a new product at the beginnig of th earray
             newState.products.unshift(action.payload);
             break;
