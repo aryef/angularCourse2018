@@ -2,13 +2,33 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
 import { Observable, Observer } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { NgRedux } from 'ng2-redux';
+import {AppState} from '../redux/app.state';
+import { ActionType } from '../redux/actions';
 
 @Injectable({
     providedIn: 'root'  ///makes it global singleton
 })
 export class ProductsService {
 
-    public constructor(private httpClent: HttpClient) { }
+    public constructor(private httpClent: HttpClient, private ngRedux: NgRedux<AppState>) { }
+
+    public downloadAllProduct():void{
+
+        this.httpClent.get<Product[]>("/assets/json/products.json").subscribe(products =>
+        {
+            this.ngRedux.dispatch({ type:ActionType.AllProductsDownloaded, payload: products
+            });
+        });
+    }
+
+    public addOneProduct(product: Product):void {
+
+        //sending product to the server
+        //adding product to the local store
+        this.ngRedux.dispatch({type: ActionType.OneProductAdded, payload: product
+        });
+    }
 
     public getTopProducts(): Product[] {
 
