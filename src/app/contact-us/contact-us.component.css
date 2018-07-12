@@ -1,9 +1,14 @@
-input, textarea, button{
+mat-form-filed, button{
+    width: 400px;
+    font-size: x-large;
+}
+
+/* input, textarea, button{
     width: 400px;
     font-size: x-large;
     margin: 10px;
 }
-
+ */
 
 span{
     margin: 10px;
@@ -11,7 +16,8 @@ span{
     color: red;
     position: absolute;
 }
-.ng-dirty.ng-invalid:not(form)
+
+/* .ng-dirty.ng-invalid:not(form)
 {
     background-color: pink;
-}
+} */

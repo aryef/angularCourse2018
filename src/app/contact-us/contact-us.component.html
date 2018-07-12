@@ -4,7 +4,9 @@
 
 <form #contactUsForm="ngForm" (ngSubmit)="send()">
 <div>
-    <input capitalized #firstName="ngModel" required name="firstName" [(ngModel)]="contactUs.firstName" type="text" placeholder="First Name">
+    <mat-form-field>
+        <input matInput capitalized #firstName="ngModel" required name="firstName" [(ngModel)]="contactUs.firstName" type="text" placeholder="First Name">
+    </mat-form-field>
     <span *ngIf="firstName.errors?.required"  [hidden]="firstName.pristine || firstName.valid">Missing First name</span>
     <span *ngIf="firstName.errors?.notCapitalized"  [hidden]="firstName.pristine || firstName.valid">First name must start with Capitall letter</span>
 </div>
