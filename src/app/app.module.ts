@@ -28,8 +28,8 @@ import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule, MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {NgRedux, NgReduxModule} from 'ng2-redux';
 import {AppState} from './redux/app.state';
-
 import {reducer} from './redux/reducer';
+import {EllipsysPipe} from './pipes/ellipsys.pipe'
 
 
 
@@ -53,7 +53,8 @@ import {reducer} from './redux/reducer';
     ColoredDirective,
     SeasonDirective,
     ContactUsComponent,
-    CapitalizedValidatorDirective
+    CapitalizedValidatorDirective,
+    EllipsysPipe
   ],
   imports: [
     BrowserModule,
