@@ -74,6 +74,13 @@ ng g d directives/colored --spec false --module app.module
 npm install @angular/material @angular/cdk @angular/animations
 
 
+https://material.angular.io/guide/getting-started
+
+https://material.angular.io/components/categories
+
+https://material.io/
+
+
 
 
 
